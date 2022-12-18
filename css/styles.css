@@ -639,8 +639,12 @@ padding-bottom: 100px;
     height: 100%;
     background-color: var(--primary-bg-color);
     opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
     transform: translateY(100%);
-    transition: transform 250ms var(--transform-style);
+    transition: transform 250ms var(--transform-style),
+    opacity 500ms var(--transform-style),
+    visibility 500ms var(--transform-style);
 }
 
 .product-action {
@@ -654,17 +658,21 @@ padding-bottom: 100px;
     letter-spacing: 0.02em;
     color: #F4F4FD;
     opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
     }
 
 .work-links:hover .product-overlay,
 .work-links:hover .product-action
 {transform: translateY(0);
-    opacity: 1;}
+    opacity: 1;
+    visibility: visible;}
 
 .work-links:focus .product-overlay,
 .work-links:focus .product-action
 {transform: translateY(0);
-        opacity: 1;}
+        opacity: 1;
+        visibility: visible;}
 
 
 
